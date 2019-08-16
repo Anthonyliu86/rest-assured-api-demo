@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.restassured</groupId>
+  <artifactId>RestAssured</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>rest-assured</artifactId>
+    	<version>4.0.0</version>
+    	<scope>test</scope> 
+	</dependency>
+	
+	<!-- use to parse json document -->
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>json-path</artifactId>
+    	<version>4.0.0</version>
+	</dependency>
+  	
+  	<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+	<!-- validate a json response conforms to a Json schema -->
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>json-schema-validator</artifactId>
+    	<version>4.0.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
+	<!-- use to parse xml document -->
+	<dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>xml-path</artifactId>
+    	<version>4.0.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+    	<groupId>org.testng</groupId>
+    	<artifactId>testng</artifactId>
+    	<version>6.14.3</version>
+    	<scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
+	<!-- match rules in assertion -->
+	<dependency>
+    	<groupId>org.hamcrest</groupId>
+    	<artifactId>java-hamcrest</artifactId>
+    	<version>2.0.0.0</version>
+    	<scope>test</scope>
+	</dependency>
+  
+  </dependencies>
+  
+</project>

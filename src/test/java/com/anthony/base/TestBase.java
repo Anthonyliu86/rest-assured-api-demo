@@ -24,12 +24,13 @@ public class TestBase {
 		// 注意这里不需要文件扩展名.properties
 		ResourceBundle rb = ResourceBundle.getBundle("config"); 
 		serverHost = rb.getString("Host");
-		port = rb.getString("Host");
+		port = rb.getString("Port");
 	}
 
 	@BeforeClass
 	public void setup() {
-		logger = Logger.getLogger("RestAPI");
+		String className = this.getClass().getName();
+		logger = Logger.getLogger(className);
 		PropertyConfigurator.configure("log4j.properties");
 		logger.setLevel(Level.DEBUG);
 		//logger.info("host: " + serverHost);

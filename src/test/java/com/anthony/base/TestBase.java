@@ -11,8 +11,6 @@ import org.testng.annotations.BeforeClass;
 import com.anthony.utils.TestUtils;
 
 import io.restassured.RestAssured;
-import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -31,6 +29,8 @@ public class TestBase {
 	public JsonPath jp = null; //JsonPath
     //测试用例中断言代码能用上这里的 testUtils对象
   	public static TestUtils testUtils = new TestUtils();
+  	//初始化请求对象
+  	public RequestSpecification req;
   	
 	
 	static {
@@ -48,13 +48,14 @@ public class TestBase {
 		PropertyConfigurator.configure("log4j.properties");
 		logger.setLevel(Level.DEBUG);
 		setBaseURI(); //设置Base URI
-		//设置Base Path，我这里是api（https://reqres.in/接口地址都是api开头，所以这里basepath设置api这个字符串），看看具体你自己项目请求地址结构
+		//设置Base Path，我这里是api（https://reqres.in/接口地址都是api开头，
+		//所以这里basepath设置api这个字符串），看看具体你自己项目请求地址结构
         setBasePath("api"); 
-        setContentType(ContentType.JSON); //设置Content Type
+        req = RestAssured.given().contentType(ContentType.JSON);
 	}
 	
-	 @AfterClass
-	    public void afterTest (){
+	@AfterClass
+	public void afterTest (){
 	        //测试之后恢复一些值的设定
 	        resetBaseURI();
 	        resetBasePath();
@@ -83,21 +84,6 @@ public class TestBase {
     //执行完测试后重置 base path
     public static void resetBasePath(){
         RestAssured.basePath = null;
-    }
-
-    //设置请求 ContentType
-    public static void setContentType (ContentType Type){
-        given().contentType(Type);
-    }
-
-    //返回指定请求path的 response内容
-    public static Response getResponsebyPath(String path) {
-        return get(path);
-    }
-
-    //返回响应内容
-    public static Response getResponse() {
-        return get();
     }
 
     //返回 JsonPath对象

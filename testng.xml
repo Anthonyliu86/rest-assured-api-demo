@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AnthonyAuto">
+
+<listeners>
+
+	<listener class-name="com.anthony.utils.Reporting" />
+
+</listeners>
+	
+    <test name="API automation test">
+        <classes>
+            <class name="com.anthony.cases.CreateTest" />
+            <class name="com.anthony.cases.ListUsersTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.anthony.cases.RegisterTest">
+        <methods>
+          <include name="test01_Register"/>
+          <include name="afterTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.anthony.cases.RegisterTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

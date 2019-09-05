@@ -1,4 +1,6 @@
-2019-08-31 23:52:39 INFO  CaseDemo1:12 - First test case 
-2019-08-31 23:52:46 INFO  CaseDemo2:12 - Second test case 
-2019-08-31 23:52:46 INFO  CaseDemo2:13 - https://reqres.in
-2019-08-31 23:52:46 INFO  CaseDemo2:14 - 80
+2019-09-01 16:29:21 INFO  CaseDemo1:36 - host: https://reqres.in
+2019-09-01 16:29:21 INFO  CaseDemo1:37 - port: 80
+2019-09-01 16:29:21 INFO  CaseDemo1:12 - First test case 
+2019-09-01 16:29:26 INFO  CaseDemo2:36 - host: https://reqres.in
+2019-09-01 16:29:26 INFO  CaseDemo2:37 - port: 80
+2019-09-01 16:29:26 INFO  CaseDemo2:12 - Second test case 

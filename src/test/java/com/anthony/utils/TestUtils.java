@@ -1,10 +1,7 @@
 package com.anthony.utils;
 
-import java.util.HashMap;
-
 import org.testng.Assert;
 
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class TestUtils {
